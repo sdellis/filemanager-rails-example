@@ -28,17 +28,16 @@
 //   {{message}}
 //   <app></app>
 // </div>
-
-
+import 'babel-polyfill'
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import App from '../App.vue'
+import store from '../store'
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
-    el: '#hello',
-    data: {
-      message: "Can you say hello?"
-    },
-    components: { App }
+    el: '#filemanager',
+    template: '<App/>',
+    components: { App },
+    store
   })
 })
