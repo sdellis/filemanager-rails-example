@@ -1,31 +1,5 @@
-<template>
-  <div id="filemanager">
-    <gallery></gallery>
-    <detail></detail>
-    <panel></panel>
-    <controls></controls>
-  </div>
-</template>
 
-<script>
-import Gallery from './components/Gallery'
-import Detail from './components/Detail'
-import Panel from './components/Panel'
-import Controls from './components/Controls'
-
-export default {
-  name: 'app',
-  components: {
-    Gallery,
-    Detail,
-    Panel,
-    Controls
-  }
-}
-</script>
-
-<style lang='scss' scoped>
-#app {
+#app[data-v-ef79e7b0] {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,32 +7,27 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-body {
+body[data-v-ef79e7b0] {
   padding-top: 50px;
 }
-
-.thumbnail {
+.thumbnail[data-v-ef79e7b0] {
   display: inline-block;
   max-width: 200px;
   margin: 10px;
 }
-
-.actions {
+.actions[data-v-ef79e7b0] {
   padding: 0 30px 0 30px;
   height: 100%;
   overflow-y: auto;
 }
-
-.img_gallery {
+.img_gallery[data-v-ef79e7b0] {
   overflow: auto;
   height: calc(100% - 40px);
   border-radius: 4px;
   margin-bottom: 40px;
   clear: both;
 }
-
-.gallery_controls {
+.gallery_controls[data-v-ef79e7b0] {
   postion: absolute;
   top: 0;
   width: 100%;
@@ -66,47 +35,39 @@ body {
   padding: 5px;
   background: #ddd;
 }
-
-.gallery_controls button {
+.gallery_controls button[data-v-ef79e7b0] {
   margin-right: 5px;
 }
-
-.gallery_controls input[type=range] {
+.gallery_controls input[type=range][data-v-ef79e7b0] {
   width: auto;
   display: inline-block;
 }
-
-#img_sizer {
+#img_sizer[data-v-ef79e7b0] {
   display: inline-block;
   float: right;
   padding: 5px;
 }
-
-#detail {
+#detail[data-v-ef79e7b0] {
   height: 100%;
   padding: 15px;
 }
-
-#detail img {
+#detail img[data-v-ef79e7b0] {
   height: 100%;
 }
 
 
 /* start presentation styles */
-
-.layout {
+.layout[data-v-ef79e7b0] {
   position: relative;
   height: 85vh;
   width: 100vw;
 }
-
-#filemanager {
+#filemanager[data-v-ef79e7b0] {
   position: relative;
   height: 85vh;
   width: 98vw;
 }
-
-.formPanel {
+.formPanel[data-v-ef79e7b0] {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -123,16 +84,14 @@ body {
 #multiSelected {
   display: none;
 }*/
-
-.controls {
+.controls[data-v-ef79e7b0] {
   position: absolute;
   bottom: 10px;
   right: 10px;
   height: 25%;
   width: 38.5%;
 }
-
-.content {
+.content[data-v-ef79e7b0] {
   position: relative;
   top: 20px;
   left: 0;
@@ -141,8 +100,7 @@ body {
   border-radius: 4px;
   border: 1px solid #ddd;
 }
-
-.sidebar {
+.sidebar[data-v-ef79e7b0] {
   position: absolute;
   top: 20px;
   right: 10px;
@@ -151,27 +109,235 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
-.selected {
+.selected[data-v-ef79e7b0] {
   border: 2px solid #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
 }
-
-.hasChanged {
+.hasChanged[data-v-ef79e7b0] {
   background-color: Tomato
 }
 
 /*#orderChangedIcon {
   display: none;
 }*/
-
-.thumbnail .caption {
+.thumbnail .caption[data-v-ef79e7b0] {
   pointer-events: none;
   overflow: hidden;
 }
-
-.thumb {
+.thumb[data-v-ef79e7b0] {
   pointer-events: none;
 }
 
-</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-inline fieldset[data-v-d6a6a1d8] {
+  display: inline-block;
+}
+.form-inline .row[data-v-d6a6a1d8] {
+  margin-top:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
