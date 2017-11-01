@@ -22,6 +22,25 @@ npm install
 foreman start
 ```
 
+### Selection of images
+Images are selected by clicking on them. You can select multiple images in a row by selecting one and then holding Shift and clicking another image. You can also select a la carte multiple images by holding the Command button and clicking images.
+
+### Rearranging of images
+Images can be dragged around the gallery window to reorder them. If you need to reorder multiple images at once, or it's cumbersome to drag and image from the beginning to the end you can cut/copy and paste (see Key Commands below for details).
+
+### Key commands
+(Not implemented yet)
+Ctrl-C = copy selected images
+Ctrl-X = cut selected images
+Ctrl-V = paste copied/cut images after last currently selected image
+(The above are also available via Right+Click context menu.)
+
+Ctrl-Z = undo
+Ctrl+Shift-Z = redo
+Ctrl-S = save
+(The above commands are also available via buttons in the Controls panel.)
+
+
 ## Explanation
 In addition to `webpacker` and `foreman` gems, the above commands will install the `filemanager` npm package. Foreman allows us to start both the Rails server and the Webpack server with one command. This contains all the Figgy Filemanager Vue components. These components can be rearranged according to your needs in the `app/javascript/app.vue` file. You can bypass the styles provided by including your own styles via the asset pipeline and removing the `stylesheet_pack_tag` from `app/views/filemanager/index.html.erb`.
 
@@ -44,21 +63,3 @@ and thumbnails. You can label single pages, or "auto-label" multiple pages at a 
 
 ### Controls
 The control panel houses the Save button, some state indicators, and ultimately the `undo` and `redo` buttons.
-
-## Selection of images
-Images are selected by clicking on them. You can select multiple images in a row by selecting one and then holding Shift and clicking another image. You can also select a la carte multiple images by holding the Command button and clicking images.
-
-## Rearranging of images
-Images can be dragged around the gallery window to reorder them. If you need to reorder multiple images at once, or it's cumbersome to drag and image from the beginning to the end you can cut/copy and paste (see Key Commands below for details).
-
-## Key commands
-(Not implemented yet)
-Ctrl-C = copy selected images
-Ctrl-X = cut selected images
-Ctrl-V = paste copied/cut images after last currently selected image
-(The above are also available via Right+Click context menu.)
-
-Ctrl-Z = undo
-Ctrl+Shift-Z = redo
-Ctrl-S = save
-(The above commands are also available via buttons in the Controls panel.)
