@@ -30,7 +30,7 @@
 // </div>
 import 'babel-polyfill'
 import Vue from 'vue/dist/vue.esm'
-import App from '../App.vue'
+import App from '../app.vue'
 import store from '../store'
 
 document.addEventListener('turbolinks:load', () => {

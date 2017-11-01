@@ -35,60 +35,6 @@ body {
   padding-top: 50px;
 }
 
-.thumbnail {
-  display: inline-block;
-  max-width: 200px;
-  margin: 10px;
-}
-
-.actions {
-  padding: 0 30px 0 30px;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.img_gallery {
-  overflow: auto;
-  height: calc(100% - 40px);
-  border-radius: 4px;
-  margin-bottom: 40px;
-  clear: both;
-}
-
-.gallery_controls {
-  postion: absolute;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  padding: 5px;
-  background: #ddd;
-}
-
-.gallery_controls button {
-  margin-right: 5px;
-}
-
-.gallery_controls input[type=range] {
-  width: auto;
-  display: inline-block;
-}
-
-#img_sizer {
-  display: inline-block;
-  float: right;
-  padding: 5px;
-}
-
-#detail {
-  height: 100%;
-  padding: 15px;
-}
-
-#detail img {
-  height: 100%;
-}
-
-
 /* start presentation styles */
 
 .layout {
@@ -103,6 +49,12 @@ body {
   width: 98vw;
 }
 
+.actions {
+  padding: 0 30px 0 30px;
+  height: 100%;
+  overflow-y: auto;
+}
+
 .formPanel {
   position: absolute;
   bottom: 10px;
@@ -112,14 +64,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
-/*#singleSelected {
-  display: none;
-}
-
-#multiSelected {
-  display: none;
-}*/
 
 .controls {
   position: absolute;
@@ -147,28 +91,6 @@ body {
   width: 38.5%;
   border: 1px solid #ddd;
   border-radius: 4px;
-}
-
-.selected {
-  border: 2px solid #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
-}
-
-.hasChanged {
-  background-color: Tomato
-}
-
-/*#orderChangedIcon {
-  display: none;
-}*/
-
-.thumbnail .caption {
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.thumb {
-  pointer-events: none;
 }
 
 </style>
