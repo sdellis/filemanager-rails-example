@@ -8,10 +8,7 @@
 </template>
 
 <script>
-import Gallery from './components/Gallery'
-import Detail from './components/Detail'
-import Panel from './components/Panel'
-import Controls from './components/Controls'
+import {Gallery, Detail, Panel, Controls} from 'filemanager'
 
 export default {
   name: 'app',
