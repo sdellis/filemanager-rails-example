@@ -5,7 +5,6 @@ import ImageCollection from '../fixtures/images'
 Vue.use(Vuex)
 
 const state = {
-  count: 0,
   startPage: ImageCollection.startPage,
   thumbnail: ImageCollection.thumbnail,
   images: ImageCollection.images,
@@ -15,12 +14,6 @@ const state = {
 }
 
 const mutations = {
-  INCREMENT (state) {
-    state.count++
-  },
-  DECREMENT (state) {
-    state.count--
-  },
   SELECT (state, imgArray) {
     state.selected = imgArray
   },
