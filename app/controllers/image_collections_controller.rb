@@ -12,7 +12,7 @@ class ImageCollectionsController < ApplicationController
   end
 
   def show
-    json_response(@image_collection)
+    json_response(@image_collection.as_json(include: :images))
   end
 
   def update
