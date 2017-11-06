@@ -33,7 +33,7 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.permit(:label, :page_type, :url)
+    params.permit(:label, :page_type, :url, :image_collection_id)
   end
 
   def set_image_collection

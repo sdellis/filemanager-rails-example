@@ -12,6 +12,7 @@ class ImageCollectionsController < ApplicationController
   end
 
   def show
+    # imgs = @image_collection.collect {|o| {:id => o.id.to_s, :title => o.title, :startpage => o.startpage, :thumbnail => o.thumbnail} } }
     json_response(@image_collection.as_json(include: :images))
   end
 
@@ -28,7 +29,7 @@ class ImageCollectionsController < ApplicationController
   private
 
   def image_collection_params
-    params.permit(:title, :thumbnail, :startpage)
+    params.permit(:title, :thumbnail, :startpage, :images, :id)
   end
 
   def set_image_collection

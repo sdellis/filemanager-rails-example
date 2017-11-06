@@ -1,15 +1,16 @@
 import Vue from 'vue/dist/vue.esm'
 import Vuex from 'vuex'
-import ImageCollection from '../fixtures/images'
+// import ImageCollection from '../fixtures/images'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
 const state = {
-  startPage: ImageCollection.startPage,
-  thumbnail: ImageCollection.thumbnail,
-  images: ImageCollection.images,
+  startPage: '',
+  thumbnail: '',
+  images: [],
   selected: [],
-  ogImages: ImageCollection.images,
+  ogImages: [],
   changeList: []
 }
 
@@ -17,7 +18,16 @@ const mutations = {
   SELECT (state, imgArray) {
     state.selected = imgArray
   },
+  SET_STATE (state, ImageCollection) {
+    state.startPage = ImageCollection.startpage
+    state.thumbnail = ImageCollection.thumbnail
+    state.images = ImageCollection.images
+    state.ogImages = ImageCollection.images
+    // state.images = [ ...ImageCollection.images ]
+    // state.ogImages = [ ...ImageCollection.images ]
+  },
   SAVE_STATE (state) {
+    alert('state saved!')
     state.ogImages = [ ...state.images ]
     state.changeList = [...[]]
     state.selected = [...[]]
@@ -45,11 +55,23 @@ const actions = {
       commit('INCREMENT')
     }, 200)
   },
+  loadImageCollection (context) {
+    axios.get('/image_collections/2').then((response) => {
+      context.commit('SET_STATE', response.data )
+    }, (err) => {
+      console.log(err)
+    })
+  },
   handleSelect (context, imgArray) {
     context.commit('SELECT', imgArray)
   },
-  saveState (context) {
-    context.commit('SAVE_STATE')
+  saveState (context, body) {
+    console.log(body)
+    axios.put('/image_collections/2', body).then((response) => {
+      context.commit('SAVE_STATE', response.data )
+    }, (err) => {
+      console.log(err)
+    })
   },
   sortImages (context, value) {
     context.commit('SORT_IMAGES', value)
