@@ -38,6 +38,11 @@ document.addEventListener('turbolinks:load', () => {
     el: '#filemanager',
     template: '<App/>',
     components: { App },
-    store
+    store,
+    data: {collection: null},
+    beforeMount: function () {
+        this.collection = this.$el.attributes['data-collection'].value
+        this.$store.dispatch('loadImageCollection', this.collection)
+    },
   })
 })

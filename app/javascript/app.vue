@@ -17,9 +17,6 @@ export default {
     Detail,
     Panel,
     Controls
-  },
-  beforeCreate: function () {
-    this.$store.dispatch('loadImageCollection')
   }
 }
 </script>

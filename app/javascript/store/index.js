@@ -55,8 +55,8 @@ const actions = {
       commit('INCREMENT')
     }, 200)
   },
-  loadImageCollection (context) {
-    axios.get('/image_collections/2').then((response) => {
+  loadImageCollection (context, collection) {
+    axios.get('/image_collections/' + collection).then((response) => {
       context.commit('SET_STATE', response.data )
     }, (err) => {
       console.log(err)
